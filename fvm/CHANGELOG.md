@@ -4,6 +4,40 @@ Changes to the reference FVM implementation.
 
 ## [Unreleased]
 
+## 3.0.0-alpha.24 [2022-02-09]
+
+- Add IPLD codecs to the gas trace. I.e., use `IpldBlock` instead of `RawBytes`.
+- Finalize gas parameters.
+
+## 3.0.0-alpha.23 [2022-02-06]
+
+- Large update to gas charging:
+    - Change send gas.
+    - Add actor lookup/update gas.
+    - Add address lookup/update gas.
+    - Update IPLD gas fees.
+    - Update event gas.
+    - Add a tipset lookup gas fee.
+- Tweaks to the event syscall parameters (it now takes a codec and accepts raw values).
+
+## 3.0.0-alpha.22 [2022-02-01]
+
+- Align events implementation with FIP-0049 (#1481)
+- feat: explicitly reject placeholder creation (#1568)
+- Integrate fvm-bench and the basics of a testkit (#1493)
+- feat: simplify gas tracking stack (#1526)
+- feat: `CarReader::read_into()` (#1524)
+- feat: normalize transaction signatures (#1525)
+- fix: expose the effective gas premium (#1512)
+
+## 3.0.0-alpha.21 [2022-01-19]
+
+- Machine: Put the Empty Array object in the blockstore on creation
+- Kernel: Restrict `create_actor` to the InitActor
+  - We make an exception for integration tests
+- Deps: Update `derive_builder` to 0.12.0
+- Use CBOR instead of DAG_CBOR for message params
+
 ## 3.0.0-alpha.20 [2022-01-17]
 
 - Add `hyperspace` feature to loosen up network version restrictions.
