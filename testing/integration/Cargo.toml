@@ -52,7 +52,7 @@ fil_gaslimit_actor = { path = "tests/fil-gaslimit-actor" }
 fil_readonly_actor = { path = "tests/fil-readonly-actor" }
 fil_create_actor = { path = "tests/fil-create-actor" }
 
-actors-v10 = { package = "fil_builtin_actors_bundle", git = "https://github.com/filecoin-project/builtin-actors", branch = "next", features = ["m2-native"] }
+actors-v10 = { package = "fil_builtin_actors_bundle", git = "https://github.com/filecoin-project/builtin-actors", branch = "next", features = [] }
 
 [features]
 default = []
